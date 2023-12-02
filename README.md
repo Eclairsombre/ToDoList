@@ -1,8 +1,36 @@
-# React + Vite
+# ToDoList App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple ToDoList App built with React.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Add tasks to your ToDoList.
+- Mark tasks as completed.
+- Remove tasks from the list.
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/Eclairsomre/ToDoList.git
+  ```
+2. Navigate to the project directory:
+   ```bash
+   cd ToDoList
+   ```
+3. Install dependencies
+   ```bash
+   npm install
+   ```
+4. Start the dev server
+   ```bash
+   npm start
+   ```
+
+Visit 'http://localhost:3000 in your web browser to use the ToDoList App.
