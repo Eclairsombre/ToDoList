@@ -17,9 +17,9 @@ Make sure you have Node.js and npm installed on your machine.
 ### Installation
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/Eclairsomre/ToDoList.git
-  ```
+   ```bash
+   git clone https://github.com/Eclairsomre/ToDoList.git
+   ```
 2. Navigate to the project directory:
    ```bash
    cd ToDoList
