@@ -61,16 +61,8 @@ function ToDoList() {
       <TaskForm onAdd={addTask} />
       {tasks.map((task ,index) => (
         <Task {...task}
-        onTrash={() => {
-          if (index != null) {
-            removeTask(index);
-          }
-        }}
-        onToggle={done => {
-          if (done != null && index != null) {
-            updateTaskDone(index, done);
-          }
-        }}/>
+        onTrash={() => removeTask(index)}
+         onToggle={done => updateTaskDone(index,done)} />
       ))
       }
 
