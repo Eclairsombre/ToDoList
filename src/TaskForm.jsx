@@ -4,12 +4,12 @@ export default function TaskForm({ onAdd }) {
     const [taskName, setTaskName] = useState("");
 
     function handleSubmit(e) {
-        e.preventDefault();
-        if (!taskName) return;
+      e.preventDefault();
+      if (!taskName) return;
+      if (onAdd) {
         onAdd(taskName);
-        setTaskName("");
-        
- 
+      }
+      setTaskName("");
     }
   return (
     <form onSubmit={handleSubmit}>
