@@ -27,11 +27,16 @@ function ToDoList() {
   },[tasks]);
 
   useEffect(() => {
-   const tasks =JSON.parse(localStorage.getItem('tasks') );
-   setTasks(tasks);
-  },[]);
-
-  function updateTaskDone(taskIndex,done){
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+  function updateTaskDone(taskIndex, done) {
+    setTasks(prev => {
+      return prev.map((task, index) => {
+        if (index === taskIndex) {
+          return { ...task, done };
+        }
+        return task;
+      });
+    });
     setTasks(prev => {
       return prev.map((task,index) => {
         if (index === taskIndex){
@@ -41,6 +46,7 @@ function ToDoList() {
       })
     })
   }
+},[]);
 
   const numberOfTasks = tasks.length;
   const numberOfTasksDone = tasks.filter(task => task.done).length;
