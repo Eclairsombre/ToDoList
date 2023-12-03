@@ -26,8 +26,7 @@ function ToDoList() {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   },[tasks]);
 
-  useEffect(() => {
-    const tasks = JSON.parse(localStorage.getItem('tasks'));
+
   function updateTaskDone(taskIndex, done) {
     setTasks(prev => {
       return prev.map((task, index) => {
@@ -37,16 +36,17 @@ function ToDoList() {
         return task;
       });
     });
-    setTasks(prev => {
-      return prev.map((task,index) => {
-        if (index === taskIndex){
-          return {...task,done}
-        }
-        return task;
-      })
-    })
   }
-},[]);
+  useEffect(() => {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks) {
+      setTasks(tasks);
+    }
+    else {
+      setTasks([]);
+    }
+    
+  },[]);
 
   const numberOfTasks = tasks.length;
   const numberOfTasksDone = tasks.filter(task => task.done).length;
